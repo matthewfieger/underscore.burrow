@@ -1,7 +1,7 @@
 Underscore.burrow
 =================
 
-Underscore.burrow is an extenstion for converting flat data into nested tree structures based on an arbitrary number of nodes meaning that you can have a leaf or a branch at arbitrary depths.
+Underscore.burrow is an extenstion for converting flat data into nested tree structures based on an arbitrary number of nodes meaning that you can have a leaf or a branch at arbitrary depths.  If[Underscore.nest](https://github.com/iros/underscore.nest) and/or [https://github.com/mbostock/d3/wiki/Arrays](d3.nest) didn't work for you because your data has arbitrary depth, then Underscore.burrow might help.  This was original designed to work with [D3 Zoomable Treemap Example](http://bost.ocks.org/mike/treemap/).
 
 For example, if your data looks like this:
 
