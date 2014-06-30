@@ -1,7 +1,7 @@
 Underscore.burrow
 =================
 
-Underscore.burrow is an extenstion for converting flat data into nested tree structures based on an arbitrary number of nodes meaning that you can have a leaf or a branch at arbitrary depths.  If[Underscore.nest](https://github.com/iros/underscore.nest) and/or [https://github.com/mbostock/d3/wiki/Arrays](d3.nest) didn't work for you because your data has arbitrary depth, then Underscore.burrow might help.  This was original designed to work with [D3 Zoomable Treemap Example](http://bost.ocks.org/mike/treemap/).
+Underscore.burrow is an extenstion for converting flat data into nested tree structures based on an arbitrary number of nodes, meaning that you can encounter a leaf or a branch at arbitrary depths.  If [Underscore.nest](https://github.com/iros/underscore.nest) and/or [D3.nest](https://github.com/mbostock/d3/wiki/Arrays) didn't work for you because your data has arbitrary depth, then Underscore.burrow might help.  This was originally designed to work with the [D3 Zoomable Treemap Example](http://bost.ocks.org/mike/treemap/).
 
 For example, if your data looks like this:
 
@@ -58,7 +58,7 @@ You can accomplish that by using underscore.burrow like so:
 # API:
 
 ```javascript
-_.nest(data, rootNodeName);
+_.burrow(data, rootNodeName);
 ```
 
 * `data` - An array of objects, or an array of arrays.  If you pass an array of objects, each object must have a `nodes` property whose value is an array of nodes.  Optionally, if you pass an array of objects, each object can have a `leafData` property, whose value is either a string or an object.  The `leadData` will be included in the leaf nodes.
@@ -77,7 +77,7 @@ var data = [
     {nodes : ['tag-c'], leafData : {name : 'Post 3'} }
   ];
 
-_.nest(data);
+_.burrow(data);
 ```
 
 Results in:
@@ -127,7 +127,7 @@ var data = [
     ['tag-c']
   ];
 
-_.nest(data);
+_.burrow(data);
 ```
 
 Results in:
