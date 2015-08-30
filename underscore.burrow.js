@@ -115,6 +115,7 @@ var burrow = function (data, root) {
   }; // return
 }; // burrow
 
+var _ = require('./underscore');
 
 // Exports
 if (!!_) {
@@ -122,5 +123,3 @@ if (!!_) {
 } else {
   Burrow = burrow;
 }
-
-//var test_08a = testburrow([{nodes : ['a', 'b', 'c']}, {leafData: 'foobar', nodes : ['a', 'b', 'c']}, {leafData: {bar: 'foo'}, nodes : ['a', 'c', 'b']}], 'Observations');
